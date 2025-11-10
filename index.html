@@ -14,8 +14,10 @@
 
       body {
         display: flex;
+        flex-direction: column; /* لترتيب العناصر بشكل عمودي */
         justify-content: center;
         align-items: center;
+        padding: 2rem 0; /* إضافة مساحة لتجنب التصاق المحتوى بالحواف */
       }
 
       .card-container {
@@ -39,6 +41,25 @@
         padding: 0;
         margin: 0;
       }
+
+      .download-btn {
+        display: inline-block;
+        margin-top: 24px; /* مسافة بين البطاقة والزر */
+        padding: 12px 24px;
+        background-color: #007bff; /* لون الزر أزرق */
+        color: white; /* لون النص أبيض */
+        text-decoration: none; /* إزالة الخط تحت النص */
+        border-radius: 8px;
+        font-family: sans-serif; /* خط عصري */
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .download-btn:hover {
+        background-color: #0056b3; /* لون أغمق عند تمرير الماوس */
+        transform: translateY(-2px); /* تأثير حركة بسيط للأعلى */
+      }
     </style>
   </head>
   <body>
@@ -52,5 +73,11 @@
       >
       </iframe>
     </div>
+
+    <!-- زر التحميل -->
+    <!-- هام: قم باستبدال "card-image.png" بالاسم الحقيقي لملف الصورة الذي قمت بتنزيله من Canva -->
+    <a href="./Front.png" download="business-card.png" class="download-btn"
+      >تحميل البطاقة كصورة</a
+    >
   </body>
 </html>
